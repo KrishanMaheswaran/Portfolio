@@ -1,0 +1,156 @@
+/* Basic styling for navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #1f2d3d;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 20px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.topnav a:hover {
+    background-color: #27ae60; /* Softer hover color */
+    color: white;
+}
+
+.topnav a.active {
+    background-color: #27ae60; 
+    color: white;
+}
+
+/* Add a shadow effect when user scrolls */
+.topnav.scrolled {
+    background-color: #17202a; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Section Styling */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://media.licdn.com/dms/image/v2/D4E03AQGCDdm1CSlVmQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725646527990?e=1732147200&v=beta&t=ky9DyB2DAJ7A_IVdnGAG31FeGzI1O0E5zvlzhQI6JY4');
+    height: 450px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; /* Maintains original aspect ratio */
+    position: relative;
+    z-index: 1;
+}
+
+/* Text below the hero image */
+.hero-text {
+    text-align: center;
+    padding: 40px 20px;
+    color: #333;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif; /* New font for body text */
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 40px; 
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Different background colors for each section */
+#aboutMe {
+    background-color: #f7f9f9;
+}
+
+#workExperience {
+    background-color: #d5dbdb;
+}
+
+#contact {
+    background-color: #abb2b9;
+}
+
+/* Section Headers */
+section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+section h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+section p, section ul li {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer a {
+    color: white; /* White text for all footer links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer .social-links a {
+    margin: 0 15px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #d4a15b; /* Gold hover effect for social links */
+}
+
+/* Scroll effect for navigation bar */
+window.onscroll = function() {
+    var navbar = document.querySelector('.topnav');
+    if (window.pageYOffset > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+};
